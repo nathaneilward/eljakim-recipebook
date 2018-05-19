@@ -34,6 +34,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 # Reduces boot times through caching; required in config/boot.rb
+# gem 'haml', '~> 5.0', '>= 5.0.4'
+gem 'simple_form', '~> 4.0', '>= 4.0.1'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
