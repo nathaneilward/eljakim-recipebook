@@ -38,6 +38,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'simple_form', '~> 4.0', '>= 4.0.1'
 gem 'paperclip', '~> 6.0'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
+gem 'cocoon', '~> 1.2', '>= 1.2.11'
+gem 'jquery', '~> 0.0.1'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do

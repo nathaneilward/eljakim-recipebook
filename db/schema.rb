@@ -10,7 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_19_082547) do
+ActiveRecord::Schema.define(version: 2018_05_21_082728) do
+
+  create_table "ingredients", force: :cascade do |t|
+    t.string "name"
+    t.integer "recipe_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["recipe_id"], name: "index_ingredients_on_recipe_id"
+  end
+
+  create_table "instructions", force: :cascade do |t|
+    t.text "step"
+    t.integer "recipe_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["recipe_id"], name: "index_instructions_on_recipe_id"
+  end
 
   create_table "recipes", force: :cascade do |t|
     t.string "title"
@@ -18,6 +34,18 @@ ActiveRecord::Schema.define(version: 2018_05_19_082547) do
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "image_file_name"
+    t.string "image_content_type"
+    t.integer "image_file_size"
+    t.datetime "image_updated_at"
+  end
+
+  create_table "utensils", force: :cascade do |t|
+    t.string "name"
+    t.integer "recipe_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["recipe_id"], name: "index_utensils_on_recipe_id"
   end
 
 end

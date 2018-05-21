@@ -35,13 +35,13 @@ class RecipesController < ApplicationController
 
   def destroy
     @recipe.destroy
-    redirect_to root_path, notice: "Successfully delted recipe!"
+    redirect_to root_path, notice: "Successfully deleted recipe!"
   end
 
   private
 
   def recipe_params
-    params.require(:recipe).permit(:title, :description)
+    params.require(:recipe).permit(:title, :description, :image)
   end
 
   def find_recipe
