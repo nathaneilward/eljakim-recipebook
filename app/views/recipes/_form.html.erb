@@ -27,7 +27,7 @@
             <%= f.simple_fields_for :ingredients do |ingredient| %>
               <%= render "ingredients_fields", f: ingredient %>
               <div class="links">
-                <%= link_to_add_association "Add Ingredient", f, :ingredients, class: "btn btn-default add-button" %>
+                <%= link_to_add_association "Add Ingredient", f, :ingredients %>
               </div>
             <% end %>
           </div>
